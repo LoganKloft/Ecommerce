@@ -1,7 +1,7 @@
 ﻿namespace Ecommerce.Server.Helpers
 {
     using Microsoft.EntityFrameworkCore;
-    using Ecommerce.Server.Models.User;
+    using Ecommerce.Server.Models;
 
     public class DataContext : DbContext
     {
