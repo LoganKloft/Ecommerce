@@ -1,9 +1,12 @@
 using System.Text.Json.Serialization;
 using Ecommerce.Server.Helpers;
+using Ecommerce.Server.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<DataContext>();
+builder.Services.AddTransient<IUserRepository, PostgresUserRepository>();
 
 
 builder.Services.AddControllers();
